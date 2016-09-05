@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="CPrintPreview.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CPrintPreview"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Page.Resources>
+        <SolidColorBrush x:Key="MainColor" Color="#0067a6" />
+        <SolidColorBrush x:Key="LightColor" Color="#00abd8" />
+        <SolidColorBrush x:Key="buttonColor" Color="#f29c9c" />
+    </Page.Resources>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="appbar_Printer"
+                          Click="appbar_Printer_Click"
+                          Label="printer">
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="Images/Printer.png" />
+                </AppBarButton.Icon>
+            </AppBarButton>            
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid>
+        <Grid x:Name="PrintArea"   BorderThickness="1" BorderBrush="Blue"  >
+            <StackPanel>
+                <TextBlock  
+                       VerticalAlignment="Center"
+                       FontSize="36"
+                       Foreground="Black"
+                       Text="Welcome Printed World!" x:Name="Txtblock" />
+
+                <Image x:Name="imgtest" Source="Assets/caffe1.jpg"></Image>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
